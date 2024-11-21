@@ -17,13 +17,13 @@ class _LoginPageState extends State<LoginPage> {
   String staticUsername = 'rizal';
   String staticPassword = 'rizal';
 
-  // Fungsi untuk memproses login
+  // Login Process
   void _login() {
     String username = _usernameController.text;
     String password = _passwordController.text;
 
     if (username == staticUsername && password == staticPassword) {
-      // Navigasi ke halaman dashboard jika login berhasil
+      // Navigate to the home page
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -31,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
         ),
       );
     } else {
-      // Tampilkan pesan menggunakan Fluttertoast jika login gagal
+      // Fluttertoast if the username or password is incorrect
       Fluttertoast.showToast(
         msg: "Mohon maaf kamu siapa ? kayanya belum daftar deh",
         toastLength: Toast.LENGTH_SHORT,
@@ -40,9 +40,9 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  // Fungsi untuk mendaftar akun baru
+  // function for sign up
   void _signUp() {
-    // Navigasi atau logika untuk halaman pendaftaran bisa ditambahkan di sini
+    
   }
 
   @override
@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           
-          // Formulir Login
+          // Login Form
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
@@ -73,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                     labelText: 'Username',
                     labelStyle: TextStyle(color: Colors.white),
                     filled: true,
-                    fillColor: Colors.black.withOpacity(0.5),
+                    fillColor: Colors.grey.withOpacity(0.5),
                   ),
                   style: TextStyle(color: Colors.white),
                 ),
@@ -85,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                     labelText: 'Password',
                     labelStyle: TextStyle(color: Colors.white),
                     filled: true,
-                    fillColor: Colors.black.withOpacity(0.5),
+                    fillColor: Colors.grey.withOpacity(0.5),
                   ),
                   obscureText: true,
                   style: TextStyle(color: Colors.white),
@@ -95,8 +95,8 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(
                   onPressed: _login,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black.withOpacity(0.7),
-                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                    backgroundColor: Colors.grey.withOpacity(0.7),
+                    padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 12),
                   ),
                   child: const Text(
                     'Login',

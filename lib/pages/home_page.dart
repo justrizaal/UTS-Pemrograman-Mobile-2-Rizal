@@ -3,6 +3,7 @@ import 'package:starwars_coffee/components/bottom_nav_bar.dart';
 import 'package:starwars_coffee/const.dart';
 
 import 'cart_page.dart';
+import 'profil_page.dart';
 import 'shop_page.dart';
 
 
@@ -31,6 +32,10 @@ final List<Widget> pages  = [
 
 //cart page
   CartPage(),
+
+//profile page
+  ProfilPage(),
+
 ];
 
 
