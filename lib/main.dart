@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:starwars_coffee/models/coffee_shop.dart';
+import 'package:starwars_coffee/pages/login_page.dart';
 import 'pages/home_page.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       create: (context) => CoffeeShop(),
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomePage(),
+        home: LoginPage(),
       ),
     );
   }
